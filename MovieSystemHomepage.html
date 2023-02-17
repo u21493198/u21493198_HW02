@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MovieSystemHomepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootsrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="MovieSystemStyling.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+        <div class="nabar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a id="homepage" onclick="toHomepage();" class="navbar-link"
+                        href="MovieSystemHomepage.html">
+                        <img class="img-fluid"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBz9SMzRRtORfJPgR0SVxsElOKAHAcwjwBdg&usqp=CAU"></a>
+                </li>
+                <li class="nav-item"><a href="MovieSystemcartpage.html" class="navbar-link" onclick="tocartpage();"><i
+                            class="fa fa-cart-plus" style="font-size:50px" href="MovieSystemHomepage.html"
+                            id="carticon"></i></a><input type="number" value="0" id="NumberofitemsInCart"></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <h1>Movies</h1>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header" id="Movieheading1">Header</div>
+                    <p class="card-img-top" id="Movieposter1" alt="MovieImage"></p>
+                    <div class="card-body">
+                        <b>
+                            <h2 id="Movietitle1"></h2>
+                        </b>
+                        <p id="Description1"></p>
+                        <b id="Price1"></b>
+                    </div>
+                    <div class="card-footer" id="footer">
+                        <button type="button" id="showdetails" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#Moviemodal1">Show Details</button>
+                        <button type="button" class="bookticket1" onclick="AddItemsInCart1();">BOOK TICKET</button>
+
+                        <div class="container">
+                            <div class="modal" id="Moviemodal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="Modalheader1"></h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p id="modalbody1"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header" id="Movieheading2">Header</div>
+                    <p class="card-img-top" id="Movieposter2" alt="MovieImage"></p>
+                    <div class="card-body">
+                        <b>
+                            <h2 id="Movietitle2"></h2>
+                        </b>
+                        <p id="Description2"></p>
+                        <b id="Price2"></b>
+                    </div>
+                    <div class="card-footer" id="footer">
+                        <button type="button" id="showdetails" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#Moviemodal2">Show Details</button>
+                        <button type="button" class="bookticket2" onclick="AddItemsInCart2();">BOOK TICKET</button>
+
+                        <div class="container">
+                            <div class="modal" id="Moviemodal2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="Modalheader2"></h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p id="modalbody2"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header" id="Movieheading3"></div>
+                    <p class="card-img-top" id="Movieposter3" alt="MovieImage"></p>
+                    <div class="card-body">
+                        <b>
+                            <h2 id="Movietitle3"></h2>
+                        </b>
+                        <p id="Description3"> </p>
+                        <b id="Price3"></b>
+                    </div>
+                    <div class="card-footer" id="footer">
+                        <button type="button" id="showdetails" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#Moviemodal3">Show Details</button>
+                        <button type="button" class="bookticket3" onclick="AddItemsInCart3();">BOOK TICKET</button>
+
+                        <div class="container">
+                            <div class="modal" id="Moviemodal3">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="Modalheader3"></h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p id="modalbody3"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <div class="card">
+                    <div class="card-header" id="Movieheading4"></div>
+                    <p class="card-img-top" id="Movieposter4" alt="MovieImage"></p>
+                    <div class="card-body">
+                        <b>
+                            <h2 id="Movietitle4"></h2>
+                        </b>
+                        <p id="Description4"></p>
+                        <b id="Price4"></b>
+                    </div>
+                    <div class="card-footer" id="footer">
+                        <button type="button" id="showdetails" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#Moviemodal4">Show Details</button>
+                        <button type="button" class="bookticket4" onclick="AddItemsInCart4();">BOOK TICKET</button>
+
+                        <div class="container">
+                            <div class="modal" id="Moviemodal4">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="Modalheader4"></h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p id="modalbody4"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <script src="JAVASCRIPT.js"></script>
+</body>
+
+</html>
